@@ -1,1 +1,9 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+The vulnerability is that the session cookies are not set to be HTTP-only, 
+which means they can be accessed by the client side scripts through JavaScript.
+This makes the session vulnerable to session hijacking attacks where a hackercould 
+steal the session cookies. 
+
+The secure version prevents this vulnerability by setting cookies to be http-only so 
+they cant be accessed by the client side making it harder for attackers to steal the session. 
