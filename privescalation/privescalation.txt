@@ -1,0 +1,7 @@
+
+The user escalation problem here is that any user can downgrade the role of an admin. There is no password being asked so there is no authentication
+, this can be solved by having a login page and having a session ID.
+The secure version is signed by a secret key, so if anyone changes the session the key wont match and the secure property will be false. 
+the session will be authenticated and this way no one can modify the priviliges of the admin.
+
+Additional security measures could include two factor authentication. 
