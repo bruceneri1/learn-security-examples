@@ -1,3 +1,12 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 Which CIA property does tampering violate?
 What additional security mechanisms can you incorporate?
+
+The vulnerability is that the query isn't sanitized so an attacker could insert a custom query to retrieve undisclossed information, the secure
+version prevents this vulnerability by sanitizing the username that way if an attacker attemps to do a sql injection then it will return a 
+invalid username error because the query won't meet the username requirements. 
+
+This violates confidentiallity because the sql injection could disclose private information and also integrity because we are allowing an attacker
+to change the code of our application. 
+
+We could hash the passwords with SHA256 so the data isnt available to an attacker. 
