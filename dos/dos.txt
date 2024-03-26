@@ -1,2 +1,8 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+The vulnerability lies in the lack of a try and catch statement that can handle bad input that could cause a denial of service by sending
+multiple requests that could crash the server. The secure handles this by sanitizing the input and adding a try and catch so if the input is 
+wrong then that is caught and the DOS does not happen. 
+
+We can add security measures such as limiting the amount of requests per seconds. 
