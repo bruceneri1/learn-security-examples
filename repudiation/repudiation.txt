@@ -1,2 +1,9 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+There is no repudiation because there is no authentication. The secure version has a login so it collects information for every
+incoming request therefore it has repudiation since it can track users actions. The secure version creates a log of the request sent along
+with a log/record of the user that made the request. This will also require that we have a script that checks these logs and checks for
+any suspisious behaviour. If there is an error there is also a middleware function that can check what went wrong. 
+
+The additional security mechanisms could be a audit script to make sure that we check for any suspisious activity and handle it properly. 
